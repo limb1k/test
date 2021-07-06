@@ -1,0 +1,38 @@
+# Генерирую новую пару ключей
+ssh-keygen -o
+
+# Запусукаю ssh-agent
+eval "$(ssh-agent -s)"
+
+# Добавляю приватный ключ 
+ssh-add ~/.ssh/id_rsa
+
+# Копирую публичный ключ 
+clip < ~/.ssh/id_rsa.pub
+
+# Захожу в аккаун гитхаб и добавляю его в настройках
+
+# Клонирую репозиторий по ssh на локальную машину
+git clone git@example.com:example/test.git
+
+# Перехожу в папку
+cd example/test.git
+
+# Переключаюсь в ветку dev
+git checkout dev 
+
+# Открываю редактор nano и создаю файл
+nano Readme.md
+
+# Добавляю содержимое в Readme.md
+### May be in future 
+и нажимаю на клавиатуре сочитание клавиш Ctrl + X для сохранения и выхода из редактора
+
+# Указываю git, что нужно отслеживать новый файл
+git add Readme.md
+
+# Делаю коммит с флагом -m, чтобы оставить сообщение
+git commit -m "Added the Readme.md file to branch dev"
+
+# Отправляю коммит в удаленный репозиторий, origin - слонированный репозиторий
+git push origin dev

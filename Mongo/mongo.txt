@@ -1,0 +1,13 @@
+1. > db.posts.find().skip(5).limit(5);
+2. > db.posts.find("properties": {"like": {$gt: 100})};
+3. > db.posts.insert("properties": {
+    "_id": { "bsonType": "objectId" },
+    "title": { "bsonType": "string" },
+    "content": { "bsonType": "string" },
+    "author": { "bsonType": "string" },
+    "like": { "bsonType": "int" },
+    "dislike": { "bsonType": "int" }
+  });
+
+4. > ...
+

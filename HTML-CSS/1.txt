@@ -1,0 +1,7 @@
+1. Позиционирование с помощью flexbox: где для каждого блока задаю свойство flex: 1 1 20%, а у родителя 
+   display: flex, justify-content: center, align-items: center;
+
+2. С помощью свойства float: left, для блоков, и создаю блок для очистки float, со свойство clear: both;
+
+3. С помощью grid: где для контейнера задаю display: grid, grid-template-columns: 20% 20% 20% 20% 20%,
+   align-content: center, justify-content: center;
